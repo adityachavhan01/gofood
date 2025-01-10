@@ -1,0 +1,17 @@
+/* src/components/slider.css */
+  .carousel-container {
+    width: 100%; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    height: 50%;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: fill; /* Adjust as needed. Options include 'contain', 'cover', 'fill', etc. */
+    filter: brightness(50%);
+  }
