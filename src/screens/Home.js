@@ -34,7 +34,7 @@ export default function Home() {
     <div>
       <Navbar />
       <div className="container-fluid">
-        <Slider />
+        <Slider foodCat={foodcat} />
       </div>
       <div className="container">
         {

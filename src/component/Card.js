@@ -28,13 +28,14 @@ export default function Card(props) {
             setShowAlert(false);
         }, 3000);
     };
-
+    console.log(props.imgSrc);
     // Get a random image from Unsplash
-    const randomImageUrl = `https://loremflickr.com/300/200/burger`;
+    const randomImageUrl = "https://images.pexels.com/photos/1552635/pexels-photo-1552635.jpeg?auto=compress&cs=tinysrgb&w=600";
     return (
         <div>
             <div className="card bg-dark text-light m-2 " style={{ "width": "13rem", "backgroundColor": "grey", }}>
                 <img src={props.imgSrc} className="card-img-top" alt="Random" />
+                
                 <div className="card-body">
                     <h5 className="card-title">{props.foodName}</h5>
                     <p className="card-text">Some imp text</p>
