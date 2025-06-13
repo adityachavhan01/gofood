@@ -30,7 +30,7 @@ export default function Card(props) {
     };
     console.log(props.imgSrc);
     // Get a random image from Unsplash
-    const randomImageUrl = "https://images.pexels.com/photos/1552635/pexels-photo-1552635.jpeg?auto=compress&cs=tinysrgb&w=600";
+    // const randomImageUrl = "https://images.pexels.com/photos/1552635/pexels-photo-1552635.jpeg?auto=compress&cs=tinysrgb&w=600";
     return (
         <div>
             <div className="card bg-dark text-light m-2 " style={{ "width": "13rem", "backgroundColor": "grey", }}>

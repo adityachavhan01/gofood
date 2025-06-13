@@ -1,6 +1,8 @@
+require('dotenv').config();
+
 const mongoose = require('mongoose');
 
-const mongoURI = "mongodb://localhost:27017/GOfood";
+const mongoURI = process.env.MONGO_URI;
 
 const connectToMongo = async () => {
     try {
@@ -15,7 +17,6 @@ const connectToMongo = async () => {
         
         const foodCategoryCollection = mongoose.connection.db.collection("foodcategories");
         const catData = await foodCategoryCollection.find({}).toArray();
-        
         global.food_items = data;
         global.food_category = catData;
     
