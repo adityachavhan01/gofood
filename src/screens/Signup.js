@@ -7,10 +7,12 @@ export default function Signup() {
 
   const [credintials,setcredintials] = useState({name:"",email:"",password:"",geolocation:""})
   let navigate = useNavigate();
+  const baseURL = process.env.REACT_APP_BACKEND_URL;
+
 
   const  handleSubmit = async (e) =>{
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/createuser",{
+    const response = await fetch(`${baseURL}/api/auth/createuser`,{
       method:"Post",
       headers:{
         'Content-Type': 'application/json'

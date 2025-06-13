@@ -6,10 +6,11 @@ import Footer from '../component/Footer'
 export default function Login() {
   const [credintials,setcredintials] = useState({email:"",password:""})
   let navigate = useNavigate();
+  const baseURL = process.env.REACT_APP_BACKEND_URL;
 
   const  handleSubmit = async (e) =>{
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/login",{
+    const response = await fetch(`${baseURL}/api/auth/login`,{
       method:"Post",
       headers:{
         'Content-Type': 'application/json'
